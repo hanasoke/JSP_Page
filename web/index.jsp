@@ -18,9 +18,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><%= namaBimbel %> - Bimbingan Belajar</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= namaBimbel %> - Bimbingan Belajar</title>
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
@@ -31,8 +31,8 @@
             </div>
 
             <ul>
-                <li><a href="#"><%= home %></a></li>
-                <li><a href="#program"><%= program %></a></li>
+                <li><a href="index.jsp"><%= home %></a></li>
+                <li><a href="program.jsp"><%= program %></a></li>
                 <li><a href="#keunggulan"><%= advantage %></a></li>
                 <li><a href="#kontak"><%= contact %></a></li>
                 <li>
