@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>My Album Photo</h1>
-        <a href="index.html">Back to main page</a>
+        <a href="index.jsp">Back to main page</a>
     </body>
 </html>
