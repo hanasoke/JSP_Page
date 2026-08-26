@@ -34,7 +34,7 @@
                 <li><a href="index.jsp"><%= home %></a></li>
                 <li><a href="program.jsp"><%= program %></a></li>
                 <li><a href="tentang.jsp"><%= advantage %></a></li>
-                <li><a href="#kontak"><%= contact %></a></li>
+                <li><a href="kontak.jsp"><%= contact %></a></li>
                 <li>
                     <a href="#daftar" class="btn-daftar">
                         Daftar
@@ -168,6 +168,6 @@
                 © <%= year %> <%= namaBimbel %>. All Rights Reserved.
             </p>
         </footer>
-        
+            
     </body>
 </html>

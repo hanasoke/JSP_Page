@@ -51,14 +51,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="daftar.jsp"
-                       class="btn-daftar">
+                    <a href="daftar.jsp" class="btn-daftar">
                         Daftar
                     </a>
                 </li>
             </ul>
         </nav>
-
 
         <!-- HERO -->
         <section class="page-hero">
@@ -72,7 +70,6 @@
                 </p>
             </div>
         </section>
-
 
         <!-- ABOUT -->
         <section class="about-section">
@@ -109,7 +106,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- VISI MISI -->
         <section class="section about-background">
@@ -163,7 +159,6 @@
             </div>
         </section>
 
-
         <!-- CTA -->
         <section class="cta">
             <h2>
@@ -178,7 +173,6 @@
             </a>
         </section>
 
-
         <!-- FOOTER -->
         <footer>
             <h3>
@@ -192,5 +186,6 @@
                 © <%= year %> <%= course_name %>. All Rights Reserved.
             </p>
         </footer>
+            
     </body>
 </html>
