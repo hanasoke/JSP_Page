@@ -64,7 +64,7 @@
         <section class="page-hero">
             <div>
                 <h1>
-                    Tentang CerdasKu
+                    Tentang <%= course_name %>
                 </h1>
                 <p>
                     Mengenal lebih dekat siapa kami
