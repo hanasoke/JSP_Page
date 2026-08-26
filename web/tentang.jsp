@@ -86,7 +86,7 @@
                         Meraih Masa Depan
                     </h2>
                     <p>
-                        CerdasKu adalah bimbingan belajar yang
+                        <%= course_name %> adalah bimbingan belajar yang
                         hadir untuk membantu siswa mendapatkan
                         pengalaman belajar yang lebih terarah,
                         nyaman, dan efektif.
@@ -167,7 +167,7 @@
         <!-- CTA -->
         <section class="cta">
             <h2>
-                Mari Belajar Bersama CerdasKu
+                Mari Belajar Bersama <%= course_name %>
             </h2>
             <p>
                 Bersama-sama mempersiapkan langkah
@@ -182,14 +182,14 @@
         <!-- FOOTER -->
         <footer>
             <h3>
-                CerdasKu
+                <%= course_name %>
             </h3>
             <p>
                 Bimbingan belajar untuk masa depan yang lebih baik.
             </p>
             <br>
             <p>
-                © 2026 CerdasKu. All Rights Reserved.
+                © <%= year %> <%= course_name %>. All Rights Reserved.
             </p>
         </footer>
     </body>
