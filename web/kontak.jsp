@@ -144,9 +144,9 @@
                                 Jam Operasional
                             </h3>
                             <p>
-                                Senin - Sabtu
+                                Senin - Jum'at
                                 <br>
-                                08.00 - 20.00
+                                08.00 - 17.30
                             </p>
                         </div>
                     </div>

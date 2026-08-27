@@ -132,211 +132,252 @@
                             Lengkapi data siswa dengan benar.
                         </p>
                     </div>
-                    <form action="PendaftaranServlet" method="post">
-                        <!-- NAMA -->
-                        <div class="form-group">
-                            <label for="nama">
-                                Nama Lengkap
-                                <span>*</span>
-                            </label>
-                            <input
-                                type="text"
-                                id="nama"
-                                name="nama"
-                                placeholder="Masukkan nama lengkap"
-                                maxlength="100"
-                                required>
+                    <%
+                        String status = request.getParameter("status");
+                    %>
+
+                    <%
+                        if ("sukses".equals(status)) {
+                    %>
+
+                        <div class="alert-success">
+                            <strong>✓ Pendaftaran berhasil!</strong>
+                            <br>
+                            Data kamu sudah kami terima.
+                            Tim Pocinui akan segera menghubungi kamu.
                         </div>
 
-                        <!-- EMAIL -->
-                        <div class="form-row">
+                    <%
+                        } else if ("gagal".equals(status)) {
+                    %>
+
+                        <div class="alert-error">
+                            <strong>✕ Pendaftaran gagal.</strong>
+                            <br>
+                            Terjadi kesalahan saat menyimpan data.
+                            Silakan coba kembali.
+                        </div>
+
+                    <%
+                        } else if ("data_tidak_lengkap".equals(status)) {
+                    %>
+
+                        <div class="alert-warning">
+                            <strong>⚠ Data belum lengkap.</strong>
+                            <br>
+                            Silakan lengkapi semua kolom yang wajib diisi.
+                        </div>
+
+                    <%
+                        }
+                    %>
+                    <div class="registration-form">
+                        <form action="PendaftaranServlet" method="post">
+                            <!-- NAMA -->
                             <div class="form-group">
-                                <label for="email">
-                                    Email
+                                <label for="nama">
+                                    Nama Lengkap
                                     <span>*</span>
                                 </label>
                                 <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="nama@email.com"
+                                    type="text"
+                                    id="nama"
+                                    name="nama"
+                                    placeholder="Masukkan nama lengkap"
                                     maxlength="100"
+                                    required>
+                            </div>
+
+                            <!-- EMAIL -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">
+                                        Email
+                                        <span>*</span>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="nama@email.com"
+                                        maxlength="100"
+                                        required
+                                    >
+                                </div>
+
+                                <!-- WHATSAPP -->
+                                <div class="form-group">
+                                    <label for="no_hp">
+                                        Nomor WhatsApp
+                                        <span>*</span>
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="no_hp"
+                                        name="no_hp"
+                                        placeholder="08xxxxxxxxxx"
+                                        maxlength="20"
+                                        required
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- ASAL SEKOLAH -->
+                            <div class="form-group">
+                                <label for="sekolah">
+                                    Asal Sekolah
+                                    <span>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="sekolah"
+                                    name="sekolah"
+                                    placeholder="Contoh: SMA Negeri 1 Bekasi"
+                                    maxlength="150"
                                     required
                                 >
                             </div>
 
-                            <!-- WHATSAPP -->
+                            <!-- KELAS + PROGRAM -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="kelas">
+                                        Kelas
+                                        <span>*</span>
+                                    </label>
+                                    <select
+                                        id="kelas"
+                                        name="kelas"
+                                        required>
+                                        <option value="">
+                                            Pilih kelas
+                                        </option>
+                                        <option value="7">
+                                            Kelas 7 SMP
+                                        </option>
+                                        <option value="8">
+                                            Kelas 8 SMP
+                                        </option>
+                                        <option value="9">
+                                            Kelas 9 SMP
+                                        </option>
+                                        <option value="10">
+                                            Kelas 10 SMA/SMK
+                                        </option>
+                                        <option value="11">
+                                            Kelas 11 SMA/SMK
+                                        </option>
+                                        <option value="12">
+                                            Kelas 12 SMA/SMK
+                                        </option>
+                                        <option value="lulusan">
+                                            Lulusan / Gap Year
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="program">
+                                        Program Belajar
+                                        <span>*</span>
+                                    </label>
+                                    <select
+                                        id="program"
+                                        name="program"
+                                        required
+                                    >
+                                        <option value="">
+                                            Pilih program
+                                        </option>
+                                        <option value="SNBT">
+                                            Persiapan SNBT
+                                        </option>
+                                        <option value="SMA_SMK">
+                                            Bimbingan SMA/SMK
+                                        </option>
+                                        <option value="INTENSIF">
+                                            Program Intensif
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- NAMA ORANG TUA -->
                             <div class="form-group">
-                                <label for="no_hp">
-                                    Nomor WhatsApp
-                                    <span>*</span>
+                                <label for="nama_orangtua">
+                                    Nama Orang Tua / Wali
+                                </label>
+                                <input
+                                    type="text"
+                                    id="nama_orangtua"
+                                    name="nama_orangtua"
+                                    placeholder="Masukkan nama orang tua atau wali"
+                                    maxlength="100"
+                                >
+                            </div>
+
+                            <!-- WHATSAPP ORANG TUA -->
+                            <div class="form-group">
+                                <label for="no_hp_orangtua">
+                                    Nomor WhatsApp Orang Tua / Wali
                                 </label>
                                 <input
                                     type="tel"
-                                    id="no_hp"
-                                    name="no_hp"
+                                    id="no_hp_orangtua"
+                                    name="no_hp_orangtua"
                                     placeholder="08xxxxxxxxxx"
-                                    maxlength="20"
-                                    required
-                                >
+                                    maxlength="20">
                             </div>
-                        </div>
 
-                        <!-- ASAL SEKOLAH -->
-                        <div class="form-group">
-                            <label for="sekolah">
-                                Asal Sekolah
-                                <span>*</span>
-                            </label>
-                            <input
-                                type="text"
-                                id="sekolah"
-                                name="sekolah"
-                                placeholder="Contoh: SMA Negeri 1 Bekasi"
-                                maxlength="150"
-                                required
-                            >
-                        </div>
-
-                        <!-- KELAS + PROGRAM -->
-                        <div class="form-row">
+                            <!-- ALAMAT -->
                             <div class="form-group">
-                                <label for="kelas">
-                                    Kelas
-                                    <span>*</span>
+                                <label for="alamat">
+                                    Alamat
                                 </label>
-                                <select
-                                    id="kelas"
-                                    name="kelas"
+                                <textarea
+                                    id="alamat"
+                                    name="alamat"
+                                    rows="4"
+                                    placeholder="Masukkan alamat tempat tinggal"
+                                ></textarea>
+                            </div>
+
+                            <!-- CATATAN -->
+                            <div class="form-group">
+                                <label for="catatan">
+                                    Catatan
+                                </label>
+                                <textarea
+                                    id="catatan"
+                                    name="catatan"
+                                    rows="4"
+                                    placeholder="Ceritakan target belajar atau informasi tambahan..."
+                                ></textarea>
+                            </div>
+
+
+                            <!-- PERSETUJUAN -->
+                            <div class="form-check">
+                                <input
+                                    type="checkbox"
+                                    id="persetujuan"
+                                    name="persetujuan"
                                     required>
-                                    <option value="">
-                                        Pilih kelas
-                                    </option>
-                                    <option value="7">
-                                        Kelas 7 SMP
-                                    </option>
-                                    <option value="8">
-                                        Kelas 8 SMP
-                                    </option>
-                                    <option value="9">
-                                        Kelas 9 SMP
-                                    </option>
-                                    <option value="10">
-                                        Kelas 10 SMA/SMK
-                                    </option>
-                                    <option value="11">
-                                        Kelas 11 SMA/SMK
-                                    </option>
-                                    <option value="12">
-                                        Kelas 12 SMA/SMK
-                                    </option>
-                                    <option value="lulusan">
-                                        Lulusan / Gap Year
-                                    </option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="program">
-                                    Program Belajar
-                                    <span>*</span>
+                                <label for="persetujuan">
+                                    Saya memastikan data yang saya masukkan
+                                    sudah benar dan menyetujui data ini
+                                    digunakan untuk proses pendaftaran.
                                 </label>
-                                <select
-                                    id="program"
-                                    name="program"
-                                    required
-                                >
-                                    <option value="">
-                                        Pilih program
-                                    </option>
-                                    <option value="SNBT">
-                                        Persiapan SNBT
-                                    </option>
-                                    <option value="SMA_SMK">
-                                        Bimbingan SMA/SMK
-                                    </option>
-                                    <option value="INTENSIF">
-                                        Program Intensif
-                                    </option>
-                                </select>
                             </div>
-                        </div>
 
-                        <!-- NAMA ORANG TUA -->
-                        <div class="form-group">
-                            <label for="nama_orangtua">
-                                Nama Orang Tua / Wali
-                            </label>
-                            <input
-                                type="text"
-                                id="nama_orangtua"
-                                name="nama_orangtua"
-                                placeholder="Masukkan nama orang tua atau wali"
-                                maxlength="100"
-                            >
-                        </div>
-
-                        <!-- WHATSAPP ORANG TUA -->
-                        <div class="form-group">
-                            <label for="no_hp_orangtua">
-                                Nomor WhatsApp Orang Tua / Wali
-                            </label>
-                            <input
-                                type="tel"
-                                id="no_hp_orangtua"
-                                name="no_hp_orangtua"
-                                placeholder="08xxxxxxxxxx"
-                                maxlength="20">
-                        </div>
-
-                        <!-- ALAMAT -->
-                        <div class="form-group">
-                            <label for="alamat">
-                                Alamat
-                            </label>
-                            <textarea
-                                id="alamat"
-                                name="alamat"
-                                rows="4"
-                                placeholder="Masukkan alamat tempat tinggal"
-                            ></textarea>
-                        </div>
-
-                        <!-- CATATAN -->
-                        <div class="form-group">
-                            <label for="catatan">
-                                Catatan
-                            </label>
-                            <textarea
-                                id="catatan"
-                                name="catatan"
-                                rows="4"
-                                placeholder="Ceritakan target belajar atau informasi tambahan..."
-                            ></textarea>
-                        </div>
-
-
-                        <!-- PERSETUJUAN -->
-                        <div class="form-check">
-                            <input
-                                type="checkbox"
-                                id="persetujuan"
-                                name="persetujuan"
-                                required>
-                            <label for="persetujuan">
-                                Saya memastikan data yang saya masukkan
-                                sudah benar dan menyetujui data ini
-                                digunakan untuk proses pendaftaran.
-                            </label>
-                        </div>
-
-                        <!-- BUTTON -->
-                        <button
-                            type="submit"
-                            class="register-submit">
-                            Daftar Sekarang →
-                        </button>
-                    </form>
+                            <!-- BUTTON -->
+                            <button
+                                type="submit"
+                                class="register-submit">
+                                Daftar Sekarang →
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
