@@ -77,7 +77,7 @@
                         PENDAFTARAN
                     </span>
                     <h2>
-                        Bergabung dengan Pocinui
+                        Bergabung dengan <%= course_name %>
                     </h2>
                     <p>
                         Pilih program belajar yang sesuai dengan
@@ -132,7 +132,7 @@
                             Lengkapi data siswa dengan benar.
                         </p>
                     </div>
-                    <form action="${pageContext.request.contextPath}/PendaftaranServlet" method="post">
+                    <form action="PendaftaranServlet" method="post">
                         <!-- NAMA -->
                         <div class="form-group">
                             <label for="nama">
