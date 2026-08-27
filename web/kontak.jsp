@@ -14,6 +14,7 @@
     String program = "Program";
     String advantage = "Keunggulan";
     String contact = "Contact";
+    String email = "cs@pocinui.com";
 %>
 <!DOCTYPE html>
 <html>
@@ -101,7 +102,7 @@
                                 Alamat
                             </h3>
                             <p>
-                                Jl. Pendidikan No. 10, Jakarta, Indonesia
+                                Jl. Sirojul Munir,RT 01 / RW 10, Jatiasih / Jatisari, Kota Bekasi, Indonesia
                             </p>
                         </div>
                     </div>
@@ -115,7 +116,7 @@
                                 WhatsApp
                             </h3>
                             <p>
-                                +62 812-3456-7890
+                                +62-8577-345-7585
                             </p>
                         </div>
                     </div>
@@ -129,7 +130,7 @@
                                 Email
                             </h3>
                             <p>
-                                info@<%= course_name %>.com
+                                <%= email %>
                             </p>
                         </div>
                     </div>

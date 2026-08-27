@@ -40,7 +40,7 @@
                 <li><a href="tentang.jsp"><%= advantage %></a></li>
                 <li><a href="kontak.jsp"><%= contact %></a></li>
                 <li>
-                    <a href="#daftar" class="btn-daftar">
+                    <a href="daftar.jsp" class="btn-daftar">
                         Daftar
                     </a>
                 </li>
