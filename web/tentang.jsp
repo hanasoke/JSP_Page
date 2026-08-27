@@ -27,8 +27,13 @@
 
         <nav>
             <div class="logo">
-                <%= course_name %>
+                <img src="img/pocinui.png" alt="Pocinui"> 
+                
+                <span>
+                    <%= course_name %>
+                </span>
             </div>
+                
             <ul>
                 <li>
                     <a href="index.jsp">

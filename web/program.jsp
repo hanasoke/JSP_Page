@@ -27,7 +27,11 @@
         <!-- NAVBAR -->
         <nav>
             <div class="logo">
-                <%= namaBimbel %>
+                <img src="img/pocinui.png" alt="Pocinui"> 
+                
+                <span>
+                    <%= namaBimbel %>
+                </span>
             </div>
 
             <ul>
