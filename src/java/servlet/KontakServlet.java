@@ -54,13 +54,13 @@ public class KontakServlet extends HttpServlet {
 
             e.printStackTrace();
 
-//            response.sendRedirect(
-//                "kontak.jsp?status=gagal"
-//            );
-            response.setContentType("text/plain");
-            response.getWriter().println(
-                "Error: " + e.getMessage()
+            response.sendRedirect(
+                "kontak.jsp?status=gagal"
             );
+//            response.setContentType("text/plain");
+//            response.getWriter().println(
+//                "Error: " + e.getMessage()
+//            );
         }
     }
 }
