@@ -23,6 +23,9 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
+        <%
+            String status = request.getParameter("status");
+        %>
         <!-- NAVBAR -->
         <nav>
             <div class="logo">
@@ -147,13 +150,35 @@
                         </div>
                     </div>
                 </div>
+                
+                <%
+                    if ("sukses".equals(status)) {
+                %>
+
+                    <div class="success-message">
+                        Pesan berhasil dikirim!
+                        Tim Pocinui akan segera menghubungi kamu.
+                    </div>
+
+                <%
+                    } else if ("gagal".equals(status)) {
+                %>
+
+                    <div class="error-message">
+                        Pesan gagal dikirim.
+                        Silakan coba lagi.
+                    </div>
+
+                <%
+                    }
+                %>
 
                 <!-- FORM -->
                 <div class="contact-form">
                     <h2>
                         Kirim Pesan
                     </h2>
-                    <form action="#" method="post">
+                    <form action="KontakServlet" method="post">
                         <label>
                             Nama Lengkap
                         </label>
